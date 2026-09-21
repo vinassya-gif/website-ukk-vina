@@ -1,0 +1,243 @@
+
+
+.nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: transparent;
+}
+
+.nav-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+
+.nav-pill {
+    background: #ffffff;
+    border-radius: 9999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Logo + nama sekolah */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.nav-brand img,
+.nav-brand svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.nav-brand-text {
+    line-height: 1.2;
+}
+
+.nav-brand-title {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 1rem;
+}
+
+.nav-brand-tagline {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #0284c7;
+}
+
+/* Menu desktop */
+.nav-menu {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-mobile-toggle {
+        display: none;
+    }
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #0284c7;
+}
+
+.nav-link.active {
+    color: #0284c7;
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 0.25rem;
+}
+
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    transition: color 0.15s ease-in-out;
+}
+
+.nav-dropdown-btn:hover {
+    color: #0284c7;
+}
+
+.nav-dropdown-btn svg {
+    height: 0.875rem;
+    width: 0.875rem;
+    fill: currentColor;
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-top: 0.75rem;
+    width: 12rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+    z-index: 50;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #374151;
+    text-decoration: none;
+}
+
+.nav-dropdown-menu a:hover {
+    background: #f0f9ff;
+    color: #0284c7;
+}
+
+/* Tombol kanan (CTA / auth) */
+.nav-cta {
+    display: none;
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background 0.15s ease-in-out;
+}
+
+.nav-cta:hover {
+    background: #0369a1;
+}
+
+@media (min-width: 1024px) {
+    .nav-cta {
+        display: inline-block;
+    }
+}
+
+.nav-user-btn {
+    display: none;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .nav-user-btn {
+        display: inline-flex;
+    }
+}
+
+/* Hamburger */
+.nav-mobile-toggle {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.nav-mobile-toggle:hover {
+    background: #f3f4f6;
+}
+
+.nav-mobile-toggle svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: currentColor;
+    fill: none;
+}
+
+/* Menu mobile */
+.nav-mobile-menu {
+    display: none;
+    margin-top: 0.5rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+}
+
+.nav-mobile-menu.open {
+    display: block;
+}
+
+.nav-mobile-menu a {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    .nav-mobile-menu {
+        display: none !important;
+    }
+}

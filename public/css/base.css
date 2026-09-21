@@ -1,0 +1,38 @@
+:root {
+    --navy: #16233F;
+    --navy-light: #24365F;
+    --paper: #F5F6F8;
+    --gold: #E8A23D;
+    --teal: #2E9C8C;
+    --ink: #1B1F2A;
+    --slate: #5B6472;
+    --border: #E3E6EC;
+
+    --bs-primary: var(--navy);
+    --bs-primary-rgb: 22, 35, 63;
+    --bs-warning: var(--gold);
+    --bs-warning-rgb: 232, 162, 61;
+    --bs-success: var(--teal);
+    --bs-success-rgb: 46, 156, 140;
+    --bs-body-font-family: 'Inter', sans-serif;
+    --bs-body-color: var(--ink);
+    --bs-link-color: var(--navy);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--paper);
+    color: var(--ink);
+}
+
+.brand-font,
+h1,
+h2,
+h3,
+h4,
+.hero-section h1,
+.section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+}

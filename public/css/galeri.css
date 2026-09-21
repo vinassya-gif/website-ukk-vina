@@ -1,0 +1,113 @@
+.galeri-masonry {
+    column-count: 3;
+    column-gap: 14px;
+}
+
+.galeri-masonry .galeri-item {
+    break-inside: avoid;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.galeri-masonry img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    transition: transform .3s ease, filter .3s ease;
+    filter: saturate(.9);
+}
+
+.galeri-masonry img:hover {
+    transform: scale(1.02);
+    filter: saturate(1.05);
+}
+
+@media (max-width: 767px) {
+    .galeri-masonry {
+        column-count: 2;
+    }
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(22, 35, 63, .92);
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-overlay.show {
+    display: flex;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 6px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.btn-filter {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 6px 18px;
+    font-size: .9rem;
+}
+
+.btn-filter.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.galeri-overlay-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.galeri-overlay-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeri-overlay-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(22, 35, 63, .85), rgba(22, 35, 63, 0) 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+}
+
+.galeri-overlay-item .overlay .judul {
+    color: #fff;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .galeri-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,42 @@
+.staff-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(22, 35, 63, .1);
+}
+
+.staff-photo {
+    height: 300px;
+    overflow: hidden;
+}
+
+.staff-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.staff-body {
+    padding: 12px 8px 14px;
+}
+
+.staff-body h6 {
+    font-family: 'Fraunces', serif;
+    font-size: .9rem;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+.staff-body p {
+    color: var(--slate);
+    font-size: .78rem;
+    margin-bottom: 0;
+}

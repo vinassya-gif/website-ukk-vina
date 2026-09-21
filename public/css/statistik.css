@@ -1,0 +1,44 @@
+.stat-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-mini-card {
+    border-radius: 14px;
+    padding: 28px 16px;
+    text-align: center;
+    color: #fff;
+    transition: transform .25s ease;
+}
+
+.stat-mini-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-mini-card i {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    opacity: .85;
+    display: block;
+}
+
+.stat-mini-card h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.stat-mini-card p {
+    font-size: .85rem;
+    margin-bottom: 0;
+    opacity: .9;
+}
+
+@media (max-width: 767px) {
+    .stat-mini-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

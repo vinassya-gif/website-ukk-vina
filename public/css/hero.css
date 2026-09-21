@@ -1,0 +1,77 @@
+/* ===== Hero Slideshow - 3 foto bergantian (crossfade otomatis, tanpa jeda hitam) ===== */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* foto dasar (fallback) supaya tidak pernah terlihat hitam saat transisi */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: heroFade 18s infinite;
+}
+
+/* Foto 1 */
+.hero-slide:nth-child(1) {
+    animation-delay: 0s;
+    opacity: 1;
+    /* tampil duluan sebelum animasi mulai, menghindari kedip di load awal */
+}
+
+/* Foto 2 */
+.hero-slide:nth-child(2) {
+    animation-delay: 6s;
+}
+
+/* Foto 3 */
+.hero-slide:nth-child(3) {
+    animation-delay: 12s;
+}
+
+@keyframes heroFade {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1,
+.hero-section p {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,19 @@
+.btn-warning {
+    color: var(--navy);
+    font-weight: 600;
+    border: none;
+}
+
+.btn-outline-primary {
+    color: var(--navy);
+    border-color: var(--navy);
+}
+
+.btn-outline-primary:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+.btn-outline-light:hover {
+    color: var(--navy);
+}

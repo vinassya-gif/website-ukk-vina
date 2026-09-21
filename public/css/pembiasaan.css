@@ -1,0 +1,52 @@
+.pembiasaan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.pembiasaan-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.pembiasaan-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease;
+}
+
+.pembiasaan-item:hover img {
+    transform: scale(1.05);
+}
+
+.pembiasaan-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(22, 35, 63, .85), rgba(22, 35, 63, 0) 65%);
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+}
+
+.pembiasaan-item .overlay i {
+    color: var(--gold);
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.pembiasaan-item .overlay span {
+    color: #fff;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+@media (max-width: 767px) {
+    .pembiasaan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

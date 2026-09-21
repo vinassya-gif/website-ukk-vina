@@ -1,0 +1,97 @@
+.table th {
+    background: var(--paper);
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    width: 30%;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    border: 1px solid var(--border);
+}
+
+.info-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.info-card .info-label {
+    color: var(--slate);
+    font-size: .75rem;
+    margin-bottom: 2px;
+}
+
+.info-card .info-value {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.visi-misi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.visi-misi-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.visi-misi-card h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.visi-misi-card h5 i {
+    color: var(--gold);
+}
+
+.visi-misi-card p {
+    color: var(--slate);
+    font-size: .9rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .visi-misi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+        .sejarah-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border);
+        }

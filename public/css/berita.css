@@ -1,0 +1,225 @@
+.berita-nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .15s ease, transform .15s ease;
+}
+
+.berita-nav-btn:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.berita-nav-btn:active {
+    transform: translateY(0);
+}
+
+.berita-grid-carousel .carousel-item .row {
+    margin: 0;
+}
+
+.berita-grid-card {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    height: auto !important;
+    min-height: 0 !important;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.berita-grid-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.berita-grid-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+}
+
+.berita-grid-indicators {
+    position: static;
+    margin-top: 20px;
+}
+
+.berita-grid-indicators [data-bs-target] {
+    background-color: #adb5bd;
+}
+
+.berita-grid-indicators [data-bs-target].active {
+    background-color: var(--bs-primary, #0d6efd);
+}
+
+.berita-grid-link {
+    color: inherit;
+}
+
+.berita-grid-link:hover .berita-grid-card {
+    transform: scale(0.99);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.berita-carousel-wrap {
+    padding: 0 60px;
+}
+
+.berita-nav-btn-left,
+.berita-nav-btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.berita-nav-btn-left {
+    left: 0;
+}
+
+.berita-nav-btn-right {
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .berita-grid-card {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (max-width: 991px) {
+    .berita-grid-overlay {
+        padding: 10px;
+    }
+
+    .berita-grid-overlay h4 {
+        font-size: 0.8rem;
+        line-height: 1.25;
+        margin-bottom: 4px !important;
+    }
+
+    .berita-grid-overlay small {
+        font-size: 0.65rem;
+    }
+
+    .berita-grid-overlay p {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .berita-carousel-wrap {
+        padding: 0 8px;
+    }
+
+    .berita-nav-btn-left,
+    .berita-nav-btn-right {
+        width: 34px;
+        height: 34px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .berita-grid-overlay h4 {
+        font-size: 0.7rem;
+    }
+
+    .berita-carousel-wrap {
+        padding: 0 4px;
+    }
+
+    .berita-nav-btn-left,
+    .berita-nav-btn-right {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+.berita-masonry {
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .berita-masonry {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .berita-masonry {
+        column-count: 1;
+    }
+}
+
+.berita-masonry-item {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+.berita-page-card {
+    position: relative;
+    transition: transform .2s ease;
+}
+
+.berita-page-card:hover {
+    transform: translateY(-4px);
+}
+
+.berita-page-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.berita-page-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.berita-page-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 20px;
+}
+
+.berita-detail-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.berita-content {
+    line-height: 1.8;
+    color: #374151;
+}
+
+.berita-masonry--related {
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .berita-masonry--related {
+        column-count: 1;
+    }
+}
