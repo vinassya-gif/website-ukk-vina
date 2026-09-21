@@ -15,5 +15,10 @@
     <div class="content-card">
         <p style="white-space:pre-line;">{{ $berita->isi }}</p>
     </div>
+
+    <div class="alert">
+        span class="text-muted">Bagikan berita ini:</span>
+    </div>
+    
 </div>
 @endsection
